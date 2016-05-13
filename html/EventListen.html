@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>useCapture</title>
+        <style type="text/css" mce_bogus="1">
+            #outDiv {
+                padding: 10px 10px 10px 10px;
+                border: 1px solid red;
+            }
+            
+            #middleDiv {
+                padding: 10px 10px 10px 10px;
+                border: 1px solid green;
+            }
+            
+            #inDiv {
+                padding: 10px 10px 10px 10px;
+                border: 1px solid blue;
+            }
+        </style>
+</head>
+
+<body>
+    <div id="outDiv">
+        <div id="middleDiv">
+            <div id="inDiv">Please Click Here</div>
+        </div>
+    </div>
+    <div id="info">
+
+    </div>
+    <script language="javascript" type="text/javascript">
+        var outDiv = document.getElementById("outDiv");  
+        var middleDiv = document.getElementById("middleDiv");  
+        var inDiv = document.getElementById("inDiv");  
+        var info = document.getElementById("info");  
+   
+        outDiv.addEventListener("click", function () { info.innerHTML += "outDiv" + "<br>"; }, false);  
+        middleDiv.addEventListener("click", function () { info.innerHTML += "middleDiv" + "<br>"; }, true);  
+        inDiv.addEventListener("click", function () { info.innerHTML += "inDiv" + "<br>"; }, false);
+    </script>
+</body>
+
+</html>

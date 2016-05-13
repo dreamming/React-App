@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<script src="../public/captchabuild.js"></script>-->
+</head>
+
+<body>
+    <div id="phone"></div>
+    <!--<div id="capture"></div>-->
+    <script src="../public/commonbuild.js"></script>
+    <script src="../public/phonebuild.js" charset="utf-8"></script>
+    <script>
+        $.ajax({
+    // 获取id，challenge，success（是否启用failback）
+    url: "http://localhost:9988/LoginFront/captcha",
+    type: "get",
+    dataType: "json", // 使用json格式
+    success: function(data) {
+        console.log(data);
+        // 使用initGeetest接口
+        // 参数1：配置参数，与创建Geetest实例时接受的参数一致
+        // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+        // initGeetest({
+        //     gt: data.gt,
+        //     challenge: data.challenge,
+        //     product: "embed", // 产品形式
+        //     offline: !data.success
+        // }, handler);
+    }
+});
+    </script>
+</body>
+
+</html>

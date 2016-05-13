@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>轩枫阁-基于Canvas实现的炫酷3D动画大背景</title>
+	<style>
+		/** {
+			margin: 0;
+			padding: 0;
+		}*/
+		
+		#body {
+			background-color: #00c1ff;
+			-webkit-transition: background-color 400ms ease-in-out;
+			-ms-transition: background-color 400ms ease-in-out;
+			-o-transition: background-color 400ms ease-in-out;
+			-moz-transition: background-color 400ms ease-in-out;
+			transition: background-color 400ms ease-in-out;
+		}
+		
+		.container {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+		
+		#output {
+			opacity: 0.3;
+			width: 100%;
+			height: 100%;
+			-webkit-transition: all 400ms ease-in-out;
+			-ms-transition: all 400ms ease-in-out;
+			-o-transition: all 400ms ease-in-out;
+			-moz-transition: all 400ms ease-in-out;
+			transition: all 400ms ease-in-out;
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script src="js/FSS.js"></script>
+	<script>
+		$(function(){
+		FSS("container", "output");
+		// $("#body").css("background-color", rgb(43, 124, 211));
+	});
+	</script>
+</head>
+
+<body>
+	<div id="container" class="container">
+		<div id="output"></div>
+	</div>
+</body>
+
+</html>
